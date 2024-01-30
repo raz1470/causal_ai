@@ -1,2 +1,2 @@
-# causal_graphs
-An introduction to how Causal Graphs can be used to assess the Marketing Effectiveness
+# Causal AI
+This project introduces Causal AI and how it can drive business value.
