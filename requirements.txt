@@ -10,3 +10,5 @@ econml==0.14.1
 statsmodels==0.14.1
 SciPy==1.11.4
 seaborn==0.13.1
+gcastle==1.0.3
+torch==2.2.0
