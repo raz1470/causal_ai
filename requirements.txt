@@ -12,3 +12,5 @@ SciPy==1.11.4
 seaborn==0.13.1
 gcastle==1.0.3
 torch==2.2.0
+causalml==0.15.0
+latexify-py==0.4.3.post1
