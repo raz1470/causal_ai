@@ -14,3 +14,4 @@ gcastle==1.0.3
 torch==2.2.0
 causalml==0.15.0
 latexify-py==0.4.3.post1
+ortools==9.9.3963
