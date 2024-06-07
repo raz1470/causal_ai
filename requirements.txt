@@ -15,3 +15,6 @@ torch==2.2.0
 causalml==0.15.0
 latexify-py==0.4.3.post1
 ortools==9.9.3963
+pytrends==4.9.2
+requestsexceptions==1.4.0
+CausalPy==0.3.0
