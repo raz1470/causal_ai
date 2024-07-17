@@ -18,3 +18,12 @@ ortools==9.9.3963
 pytrends==4.9.2
 requestsexceptions==1.4.0
 tigramite==5.2.5.1
+mkdocs==1.5.3
+mkdocs-jupyter==0.24.6
+mkdocs-autorefs==0.5.0
+mkdocs-callouts==1.9.1
+mkdocs-material==9.4.2
+mkdocs-material-extensions==1.2
+mkdocstrings==0.23.0
+mkdocstrings-python==1.7.0
+pymdown-extensions==10.7
