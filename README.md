@@ -3,9 +3,21 @@ This project introduces Causal AI and how it can drive business value.
 
 The code found in the notebooks folder was used to help write my series of articles on Towards Data Science:
 
-[Articles](https://medium.com/@raz1470)
+- [Using causal graphs to answer causal questions](https://medium.com/towards-data-science/using-causal-graphs-to-answer-causal-questions-5fd1dd82fa90)
+- [Making causal discovery work in real world business settings](https://medium.com/towards-data-science/making-causal-discovery-work-in-real-world-business-settings-80e80c5f66b8)
+- [De-biasing treatment effects with double machine learning](https://medium.com/towards-data-science/de-biasing-treatment-effects-with-double-machine-learning-63b16fcb3e97)
+- [Using double machine learning and linear programming to optimise treatment strategies](https://medium.com/towards-data-science/using-double-machine-learning-and-linear-programming-to-optimise-treatment-strategies-920c20a29553)
+- [Optimising non-linear treatment effects in pricing and promotions](https://medium.com/towards-data-science/optimising-non-linear-treatment-effects-in-pricing-and-promotions-011ce140d180)
+- [Measuring the intrinsic causal influence of your marketing campaigns](https://medium.com/towards-data-science/measuring-the-intrinsic-causal-influence-of-your-marketing-campaigns-aa8354c26b7b)
+- [Validating the causal impact of the synthetic control method](https://medium.com/towards-data-science/validating-the-causal-impact-of-the-synthetic-control-method-2f3bf185f266)
+- [Enhancing marketing mix modelling with causal ai](https://medium.com/towards-data-science/enhancing-marketing-mix-modelling-with-causal-ai-77f638bce3a9)
+- [Safeguarding demand forecasting with causal graphs](https://medium.com/towards-data-science/safeguarding-demand-forecasting-with-causal-graphs-591511fc8e0e)
+
+## Executive level pitch
+"Predictive models can tell you which customers are likely to leave. But by then, it might be too late. Causal AI, on the other hand, identifies the root causes of churn. This insight allows you to address issues before they escalate, which will significantly improve customer retention"
 
 ## Technical term glossary
+There is a sea of technical terms to get lost in… Below I have created a technical term glossary to help you swim:
 
 | Term                                 | Definition |
 |--------------------------------------|------------|
@@ -37,7 +49,6 @@ The code found in the notebooks folder was used to help write my series of artic
 
 
 ## Business problem -> causal solution map
-
 Trying to map business problems to causal solutions can easily become overwhelming… The following mapping will help you find your way:
 
 ```mermaid
@@ -49,15 +60,13 @@ flowchart LR
     A --> B2[I want to
     understand
     multiple causes]
-    B1 --> C1[I can run a 
-    randomised control
-    trial]
-    B1 --> C2[I can't run a 
-    randomised control
-    trial]
-    B2 --> C3[Causal
+    B1 --> C1[I have customer
+    level data]
+    B1 --> C2[I have geographic
+    level data]
+    B2 --> C4[Causal
     discovery]
-    B2 --> C4[I want to
+    B2 --> C5[I want to
     estimate multiple
     effects]
     C1 --> D1[I only need
@@ -66,29 +75,41 @@ flowchart LR
     C1 --> D2[I need the
     customer
     level effect]
-    C2 --> D3[I only need
-    the overall
-    effect]
-    C2 --> D4[I need the
-    customer
-    level effect]
-    D1 --> E2[ATE
-    methods]
-    D2 --> E3[CATE
-    methods]
-    D3 --> E4[Synthetic
-    Control
-    Method]
-    D4 --> E5[CATE
-    methods]
-    C4 --> E1[Causal
+    C2 --> D3[I have one 
+    control unit]
+    C2 --> D4[I have multiple 
+    control units]
+    C2 --> D5[The treatment 
+    was applied at a
+    global level]
+    D3 --> E1[Diff-in-Diffs]
+    D4 --> E4[Synthetic
+    Control]
+    D5 --> E6[Interrupted
+    Time-Series]
+    C5 --> E2[Causal
     graphs]
+    D1 --> F1[Double Machine
+    Learning]
+    D2 --> F2[Double Machine
+    Learning]
 
-    style C3 fill:#a3e635
-    style E1 fill:#a3e635
+    style C4 fill:#a3e635
     style E2 fill:#a3e635
-    style E3 fill:#a3e635
+    style E1 fill:#a3e635
+    style F1 fill:#a3e635
+    style F2 fill:#a3e635
     style E4 fill:#a3e635
-    style E5 fill:#a3e635
+    style E6 fill:#a3e635
 
 ```
+
+It also helps to be familiar with what problems different departments face. Below I've highlighted some examples that Causal AI can help with:
+
+- Acquisition: Marketing optimisation.
+- Retention: CRM optimisation, promotion optimisation, pricing optimisation, understanding the causes of churn.
+- Commercial: Why has a KPI dropped.
+- Finance: What are the drivers of profit, what was the impact of a policy change.
+- Customer services: What is driving customer service contacts, how effective are CS responses.
+- Operations: Route cause analysis, process optimisation.
+
