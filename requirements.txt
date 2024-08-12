@@ -27,3 +27,4 @@ mkdocs-material-extensions==1.2
 mkdocstrings==0.23.0
 mkdocstrings-python==1.7.0
 pymdown-extensions==10.7
+statsforecast==1.7.6
